@@ -1,0 +1,270 @@
+@import "_null.scss";
+@import "_global.scss";
+@import "_fonts.scss";
+@import "_slick.scss";
+@import "_header.scss";
+
+.about-top {
+
+  padding-top: 120px;
+
+  // .about-top__title
+
+  &__title {
+    margin-bottom: 100px;
+  }
+}
+
+
+.about-partners {
+
+  padding-bottom: 170px;
+
+  // .about-partners__title
+
+  &__title {
+    @extend %h2;
+    font-size: 130px;
+    line-height: 130px;
+    margin-bottom: 80px;
+  }
+
+  // .about-partners__items
+
+  &__items {
+    @include flexbox;
+    align-items: center;
+  }
+
+  &__items + &__items {
+    margin-top: 47px;
+  }
+
+  // .about-partners__item
+
+  &__item {
+  }
+
+  &__item + &__item {
+    margin-left: 103px;
+  }
+}
+
+.about-awards {
+
+  padding-bottom: 140px;
+
+  // .about-awards__title
+
+  &__title {
+    font-size: 130px;
+    line-height: 130px;
+    margin-bottom: 50px;
+  }
+
+  // .about-awards__items
+
+  &__items {
+    @include flexbox;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 52px;
+  }
+
+  // .about-awards__item
+
+  &__item {
+    position: relative;
+    max-width: 310px;
+    width: 100%;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 144px;
+      height: 94px;
+      background-image: url('../images/awards-logo.png');
+    }
+  }
+
+  &__img {}
+}
+
+.team {
+  padding-bottom: 80px;
+}
+
+.team__inner {
+  margin-bottom: 0;
+}
+
+@media (max-width:1430px) {
+  .about-partners__title {
+    font-size: 105px;
+    line-height: 90px;
+  }
+  .about-partners__items {
+    flex-wrap: wrap;
+  }
+  .about-partners__items + .about-partners__items {
+    margin-top: 0;
+  }
+  .about-partners__item {
+    max-width: 33%;
+    width: 100%;
+    @include flexbox;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .about-partners__item + .about-partners__item {
+    margin-left: 0;
+  }
+
+
+  .about-awards__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-awards__item {
+    // max-width: 48%;
+    margin: 0 20px 20px;
+  }
+  .about-awards__item:first-child img {
+    width: 310px;
+    height: 420px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width:1260px) {
+  .about-projects__title {
+    font-size: 110px;
+    line-height: 90px;
+  }
+  .about-awards__title {
+    font-size: 110px;
+    line-height: 90px;
+  }
+}
+
+@media (max-width:1170px) {
+  .about-partners__title {
+    font-size: 90px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width:1080px) {
+  .about-projects__title {
+    font-size: 90px;
+    line-height: 70px;
+  }
+
+
+
+  .about-partners {
+    padding-bottom: 40px;
+  }
+
+
+  .about-awards__title {
+    font-size: 90px;
+    line-height: 70px;
+  }
+  .about-awards__items {
+    padding: 0;
+  }
+}
+
+@media (max-width:1050px) {
+  .about-top__title {
+    margin-bottom: 40px;
+  }
+  .about-partners__title {
+    font-size: 70px;
+    line-height: 55px;
+  }
+
+
+  .about-awards__title {
+    font-size: 70px;
+    line-height: 55px;
+  }
+}
+
+@media (max-width:920px) {
+  .about-projects__title {
+    display: none;
+  }
+
+  .about-awards {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width:850px) {
+  .about-partners__title {
+    font-size: 55px;
+    line-height: 46px;
+  }
+}
+
+@media (max-width:720px) {
+  .about-partners__item {
+    max-width: 100%;
+  }
+  .about-partners__items:first-child {
+    .about-partners__item:nth-child(4),
+    .about-partners__item:nth-child(5),
+    .about-partners__item:nth-child(6) {
+      display: none;
+    }
+  }
+  .about-partners__items:last-child {
+    .about-partners__item:nth-child(3),
+    .about-partners__item:nth-child(5),
+    .about-partners__item:nth-child(6) {
+      display: none;
+    }
+  }
+  .about-awards__item:last-child {
+    display: none;
+  }
+}
+
+@media (max-width:570px) {
+  .about-partners__title {
+    font-size: 40px;
+    line-height: 35px;
+  }
+  .about-awards__title {
+    font-size: 50px;
+    line-height: 40px;
+    margin-bottom: 0;
+  }
+  .about-awards__item {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  .about-awards__item img {
+    width: 375px;
+    height: 500px;
+  }
+  .about-awards__item:first-child img {
+    width: 375px;
+    height: 500px;
+  }
+}
+
+@media (max-width:430px) {
+  .about-partners__title {
+    font-size: 30px;
+    line-height: 23px;
+  }
+}
+
+@import "_footer.scss";
+@import "_animate.scss";

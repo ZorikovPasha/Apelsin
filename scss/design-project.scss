@@ -1,0 +1,215 @@
+@import "_null.scss";
+@import "_global.scss";
+@import "_fonts.scss";
+@import "_slick.scss";
+@import "_header.scss";
+
+.design-top {
+
+  padding-top: 110px;
+
+  &__title {
+    margin: 50px 52px 40px;
+    @extend %h2;
+  }
+
+  // .design-top__text
+
+  &__text {
+    max-width: 411px;
+    margin-bottom: 100px;
+    padding: 0 52px;
+  }
+
+  // .design-top__bg
+
+  &__bg {
+    margin-bottom: 100px;
+  }
+
+  &__bg img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  // .design-top__stages
+
+  &__stages {
+    margin-bottom: 210px;
+  }
+
+  // .design-top__stages-title
+
+  &__stages-title {
+    font-size: 42.63px;
+    line-height: 120%;
+    margin-bottom: 40px;
+  }
+
+  // .design-top__stages-inner
+
+  &__stages-inner {
+    padding-top: 20px;
+    @include flexbox;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-image: url('../images/progress.svg');
+    }
+  }
+
+  // .design-top__stages-stage
+
+  &__stages-stage {
+    max-width: 172px;
+  }
+}
+
+.design-items {
+
+  // .design-items__bg
+
+  &__bg {
+    margin: -2px 0 40px;
+    position: relative;
+    z-index: 3;
+  }
+  &__bg img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: 50% center;
+  }
+}
+
+.design-info {
+
+  padding: 110px 0 110px;
+
+  // .design-info__text
+
+  &__text {
+    max-width: 400px;
+  }
+}
+
+@media (max-width:1300px) {
+  .design-top__title {
+    font-size: 130px;
+    line-height: 110px;
+  }
+  .design-top__stages {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width:992px) {
+  .design-top__title {
+    font-size: 95px;
+    line-height: 80px;
+  }
+  .design-top__text {
+    max-width: 100%;
+    margin-bottom: 80px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .design-top__stages-inner {
+    flex-direction: column;
+    margin-left: 130px;
+  }
+  .design-top__stages-stage {
+    max-width: 100%;
+    padding-left: 24px;
+  }
+  .design-top__stages-stage + .design-top__stages-stage {
+    margin-top: 80px;
+  }
+
+  .design-top__stages-inner::after{
+    left: 0;
+    bottom: 0;
+    right: auto;
+    height: auto;
+    width: 2px;
+    background-image: url('../images/progress-bar-vertical.svg');
+  }
+
+}
+
+@media (max-width:790px) {
+  .design-top__title {
+    margin: 10px 0 40px;
+  }
+  .design-top__text {
+    margin-bottom: 40px;
+  }
+  .design-top__bg {
+    margin-bottom: 40px;
+  }
+  .design-top__stages {
+    margin-bottom: 80px;
+  }
+  .design-items__bg {
+    margin: -2px 0 20px;
+  }
+  .design-items__bg img {
+    height: 500px;
+  }
+
+
+  .design-info {
+    padding: 80px 0;
+  }
+  .design-info__text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width:660px) {
+  .design-top__title {
+    font-size: 75px;
+    line-height: 60px;
+  }
+  .design-top__text {
+    padding: 0 15px;
+  }
+  .design-top__stages-inner {
+    margin-left: 0px;
+    padding-top: 0;
+  }
+  .design-top__stages-stage + .design-top__stages-stage {
+  margin-top: 40px;
+  }
+}
+
+@media (max-width:520px) {
+  .design-top__title {
+    font-size: 55px;
+    line-height: 40px;
+  }
+  .design-top__stages-title {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width:390px) {
+  .design-top__title {
+    font-size: 40px;
+    line-height: 35px;
+  }
+}
+
+@import "_footer.scss";
+@import "_animate.scss";
